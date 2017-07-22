@@ -1,0 +1,20 @@
+{
+
+
+    "getPHPset": {
+        "prefix": "set",
+        "body": [
+            "${1:private} $$_${2:attribute};\n",
+
+            "public function get${3:MyMethod}()\u007B",
+            "\treturn $$this->$_${2:attribute};",
+            "\u007D",
+
+            "public function set${3:MyMethod}($${4:value})\u007B",
+            "\t$$this->$_${2:attribute} = $${4:value};",
+            "\u007D\n"
+        ],
+        "description" : "Get and Set automatically"
+    }
+
+}
