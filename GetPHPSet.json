@@ -6,15 +6,17 @@
     "version": "1.2.0",
     "prefix": "set",
 	"body": [
-		"${1:private} $$_${2:$TM_SELECTED_TEXT};\n",
+		"${1:private} \\$\u005F${2:$TM_SELECTED_TEXT};\n",
 
 		"public function get${3:MyMethod}()\u007B",
-		"\treturn $$this->$_${2:$TM_SELECTED_TEXT};",
+		"\treturn \\$this->\\$\u005F${2:$TM_SELECTED_TEXT};",
 		"\u007D",
 
-		"public function set${4:MyMethod}($${5:value})\u007B",
-		"\t$$this->$_${2:$TM_SELECTED_TEXT} = $${5:value};",
-		"\u007D\n"
+		"public function set${4:MyMethod}(\\$${2:$TM_SELECTED_TEXT})\u007B",
+		"\t\\$this->\\$\u005F${2:$TM_SELECTED_TEXT} = \\$${2:$TM_SELECTED_TEXT};",
+		"\u007D\n",
+
+		"$0"
 	],
 	"description" : "Get and Set automatically"
 }
