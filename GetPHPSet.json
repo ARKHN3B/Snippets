@@ -12,8 +12,8 @@
 		"\treturn $$this->$_${2:$TM_SELECTED_TEXT};",
 		"\u007D",
 
-		"public function set${3:MyMethod}($${4:value})\u007B",
-		"\t$$this->$_${2:$TM_SELECTED_TEXT} = $${4:value};",
+		"public function set${4:MyMethod}($${5:value})\u007B",
+		"\t$$this->$_${2:$TM_SELECTED_TEXT} = $${5:value};",
 		"\u007D\n"
 	],
 	"description" : "Get and Set automatically"
