@@ -3,7 +3,7 @@
 //code à copier dans le php.json
 "getPHPset": {
     "publisher": "ARKHN3B",
-    "version": "1.2.0",
+    "version": "1.2.2",
     "prefix": "set",
 	"body": [
 		"${1:private} \\$\u005F${2:$TM_SELECTED_TEXT};\n",
