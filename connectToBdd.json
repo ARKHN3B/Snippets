@@ -1,0 +1,19 @@
+
+//A copier dans le fichier php.json
+"connectionBdd": {
+	"publisher": "ARKHN3B",
+	"version": "1.0.0",
+	"prefix": "bdd",
+	"body": [
+		"try \u007B",
+		"\t\\$${1:bdd} = new PDO('mysql:host=${2:localhost};dbname=${3:databaseName};charset=utf8', '${4:root}', '${5:root}');",
+		"\t\\$${1:bdd}->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);",
+		"\u007D",
+		"\tcatch (Exception \\$e)\u007B",
+		"\t\tdie(\"ERROR : \". \\$e->getMessage());",
+		"\t\u007D\n",
+
+		"$0"
+	],
+	"description": "Connection to DB automatycally"
+}
