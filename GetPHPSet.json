@@ -3,17 +3,21 @@
 //code à copier dans le php.json
 "getPHPset": {
     "publisher": "ARKHN3B",
-    "version": "1.2.2",
+    "version": "1.2.0",
     "prefix": "set",
 	"body": [
-		"${1:private} \\$\u005F${2:$TM_SELECTED_TEXT};\n",
+		"${1:protected} \\$\u005F${2:$TM_SELECTED_TEXT};\n",
 
 		"public function get${3:MyMethod}()\u007B",
 		"\treturn \\$this->\u005F${2:$TM_SELECTED_TEXT};",
 		"\u007D",
 
-		"public function set${4:MyMethod}(\\$${2:$TM_SELECTED_TEXT})\u007B",
-		"\t\\$this->\u005F${2:$TM_SELECTED_TEXT} = \\$${2:$TM_SELECTED_TEXT};",
+		"\npublic function set${4:MyMethod}(\\$up_${2:$TM_SELECTED_TEXT})\n\u007B",
+		"\t\\$up_${2:$TM_SELECTED_TEXT} = (${5:type}) \\$up_${2:$TM_SELECTED_TEXT}",
+
+		"\n\tif (${6}) \u007B",
+		"\t\t\\$this->\u005F${2:$TM_SELECTED_TEXT} = \\$${2:$TM_SELECTED_TEXT};",
+		"\t\u007D",
 		"\u007D\n",
 
 		"$0"
