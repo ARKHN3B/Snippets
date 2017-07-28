@@ -13,10 +13,10 @@
 		"\u007D",
 
 		"\npublic function set${4:MyMethod}(\\$up_${2:$TM_SELECTED_TEXT})\n\u007B",
-		"\t\\$up_${2:$TM_SELECTED_TEXT} = (${5:type}) \\$up_${2:$TM_SELECTED_TEXT}",
+		"\t\\$up_${2:$TM_SELECTED_TEXT} = (${5:type}) \\$up_${2:$TM_SELECTED_TEXT};",
 
-		"\n\tif (${6}) \u007B",
-		"\t\t\\$this->\u005F${2:$TM_SELECTED_TEXT} = \\$${2:$TM_SELECTED_TEXT};",
+		"\n\tif (${6:condition}) \u007B",
+		"\t\t\\$this->\u005F${2:$TM_SELECTED_TEXT} = \\$up_${2:$TM_SELECTED_TEXT};",
 		"\t\u007D",
 		"\u007D\n",
 
