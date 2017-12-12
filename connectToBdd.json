@@ -9,7 +9,7 @@
 		"\t\\$${1:bdd} = new PDO('mysql:host=${2:localhost};dbname=${3:databaseName};charset=utf8', '${4:root}', '${5:root}');",
 		"\t\\$${1:bdd}->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);",
 		"\u007D",
-		"\tcatch (Exception \\$e)\u007B",
+		"\tcatch (PDOException \\$e)\u007B",
 		"\t\tdie(\"ERROR : \". \\$e->getMessage());",
 		"\t\u007D\n",
 
